@@ -82,6 +82,17 @@ Supporting subsystems:
 mvn clean install
 ```
 
+## Documentation
+
+In-depth docs live under [`docs/`](docs/README.md):
+
+- [architecture.md](docs/architecture.md) — pipeline, components, error handling
+- [configuration.md](docs/configuration.md) — `GenerationRequest`, `GenerationConfig`, file naming
+- [extensibility.md](docs/extensibility.md) — adding formats, injectors, processors
+- [security.md](docs/security.md) — security scheme handling
+- [extensions.md](docs/extensions.md) — `x-*` vendor extensions
+- [examples.md](docs/examples.md) — schema example generation
+
 ## License
 
 See repository root.
