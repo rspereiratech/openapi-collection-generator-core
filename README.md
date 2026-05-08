@@ -1,5 +1,9 @@
 # OpenAPI Collection Generator — Core
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java 17+](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://adoptium.net/)
+[![OpenAPI 3.0](https://img.shields.io/badge/OpenAPI-3.0-6BA539.svg)](https://spec.openapis.org/oas/v3.0.3)
+
 Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
 
 This module is the engine. It is meant to be embedded in higher-level tools (Maven plugin, CLI, Gradle plugin) that wire it up and expose a user-facing entry point.
