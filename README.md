@@ -1,10 +1,11 @@
 # OpenAPI Collection Generator — Core
 
-[![Java 17+](https://img.shields.io/badge/Java-17%2B-007396.svg)](https://adoptium.net/)
-[![OpenAPI 3.0](https://img.shields.io/badge/OpenAPI-3.0-6BA539.svg)](https://spec.openapis.org/oas/v3.0.3)
-[![Swagger Parser](https://img.shields.io/badge/Swagger-Parser-85EA2D.svg)](https://github.com/swagger-api/swagger-parser)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Snapshot](https://img.shields.io/badge/status-snapshot-orange.svg)](#)
+[![Java 17+](https://img.shields.io/badge/java%2017%2B-007396.svg)](https://adoptium.net/)
+[![Maven 3.8+](https://img.shields.io/badge/maven%203.8%2B-C71A36.svg)](https://maven.apache.org/)
+[![OpenAPI 3.0](https://img.shields.io/badge/openapi%203.0-6BA539.svg)](https://spec.openapis.org/oas/v3.0.3)
+[![Swagger Parser](https://img.shields.io/badge/swagger%20parser-85EA2D.svg)](https://github.com/swagger-api/swagger-parser)
+[![MIT](https://img.shields.io/badge/MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Snapshot](https://img.shields.io/badge/snapshot-orange.svg)](#)
 
 Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
 
