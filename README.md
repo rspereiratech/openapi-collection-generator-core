@@ -98,6 +98,16 @@ In-depth docs live under [`docs/`](docs/README.md):
 - [extensions.md](docs/extensions.md) — `x-*` vendor extensions
 - [examples.md](docs/examples.md) — schema example generation
 
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, conventions, and the pull-request workflow.
+
+## Security
+
+Found a vulnerability? Don't open a public issue — see [SECURITY.md](SECURITY.md) for the disclosure process.
+
+For internals on how the library handles authentication and secrets, see [docs/security.md](docs/security.md).
+
 ## License
 
-See repository root.
+Released under the [MIT License](LICENSE).
