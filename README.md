@@ -1,10 +1,10 @@
 # OpenAPI Collection Generator — Core
 
-[![Status: Snapshot](https://img.shields.io/badge/Status-Snapshot-orange.svg)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Java 17+](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://adoptium.net/)
+[![Java 17+](https://img.shields.io/badge/Java-17%2B-007396.svg)](https://adoptium.net/)
 [![OpenAPI 3.0](https://img.shields.io/badge/OpenAPI-3.0-6BA539.svg)](https://spec.openapis.org/oas/v3.0.3)
 [![Swagger Parser](https://img.shields.io/badge/Swagger-Parser-85EA2D.svg)](https://github.com/swagger-api/swagger-parser)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: Snapshot](https://img.shields.io/badge/status-snapshot-orange.svg)](#)
 
 Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
 
