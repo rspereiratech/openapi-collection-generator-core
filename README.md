@@ -1,0 +1,87 @@
+# OpenAPI Collection Generator — Core
+
+Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
+
+This module is the engine. It is meant to be embedded in higher-level tools (Maven plugin, CLI, Gradle plugin) that wire it up and expose a user-facing entry point.
+
+## Features
+
+- Reads OpenAPI 3.x specs (YAML/JSON) via `swagger-parser`
+- Generates collections in multiple formats from a single spec:
+  - Postman v2.1
+  - Insomnia v4
+- Generates per-format environment files (variables, servers, security placeholders)
+- Pluggable example generation for primitive, array, object, composed, and nullable schemas
+- Pluggable security injection: API key (header/query/cookie), Basic, Bearer, OAuth2
+- Extension processors for common `x-*` vendor extensions (`x-internal`, `x-beta`, `x-summary`, `x-deprecated-since`)
+- Deterministic ID generation for stable diffs across regenerations
+
+## Requirements
+
+- Java 17+
+- Maven 3.8+
+
+## Installation
+
+Add the dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.github.rspereiratech</groupId>
+    <artifactId>openapi-collection-generator-core</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+</dependency>
+```
+
+## Usage
+
+The single entry point is `CollectionGenerationOrchestrator`. It runs the full pipeline: validate → parse → generate → write.
+
+```java
+GenerationRequest request = new GenerationRequest(
+        new File("openapi.yaml"),
+        new File("build/collections"),
+        List.of(CollectionFormat.POSTMAN, CollectionFormat.INSOMNIA),
+        "My API"
+);
+
+CollectionGenerationOrchestrator orchestrator = /* wire components */;
+List<GenerationResult> results = orchestrator.generate(request);
+```
+
+Each `GenerationResult` contains the generated collection file and any additional files (e.g. environment files).
+
+### File name pattern
+
+`GenerationRequest` accepts a `fileNamePattern` with `{name}` and `{format}` placeholders. When multiple formats are requested the pattern **must** include `{format}`, otherwise outputs would overwrite each other.
+
+## Architecture
+
+The pipeline is composed of small, replaceable components — every stage is an interface so you can override behavior without forking:
+
+| Stage          | Contract                          | Default implementation             |
+|----------------|-----------------------------------|------------------------------------|
+| Load           | `SpecLoader`                      | `FileSpecLoader`                   |
+| Parse          | `OpenApiParser`                   | `SwaggerOpenApiParser`             |
+| Generate       | `CollectionGenerator` (per format)| via `CollectionGeneratorFactory`   |
+| Serialize      | `CollectionSerializer`            | `JacksonCollectionSerializer`      |
+| Write          | `CollectionWriter`                | `FileCollectionWriter`             |
+| Env. files     | `EnvironmentWriter`               | `FileEnvironmentWriter`            |
+
+Supporting subsystems:
+
+- **Examples** — `SchemaExampleGenerator` chain (primitive, array, object, composed, nullable)
+- **Security** — `SecurityInjectorFactory` selects an injector per scheme; defaults cover API key, Basic, Bearer, OAuth2
+- **Extensions** — `ExtensionProcessorChain` runs `ExtensionProcessor`s for vendor `x-*` keys
+- **Schema resolution** — `SchemaRefResolver` and `DiscriminatorResolver` for `$ref` and polymorphism
+- **IDs** — `IdGenerator` with deterministic and UUID-based implementations
+
+## Building
+
+```bash
+mvn clean install
+```
+
+## License
+
+See repository root.
