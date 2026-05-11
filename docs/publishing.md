@@ -9,7 +9,7 @@ This module publishes:
 
 ## Coordinates
 
-- **Group ID** — `com.github.rspereiratech`
+- **Group ID** — `io.github.rspereiratech`
 - **Artifact ID** — `openapi-collection-generator-core`
 - **Version** — `1.0.0-SNAPSHOT` (current)
 

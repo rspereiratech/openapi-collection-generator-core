@@ -36,7 +36,7 @@ Add the dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.github.rspereiratech</groupId>
+    <groupId>io.github.rspereiratech</groupId>
     <artifactId>openapi-collection-generator-core</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
