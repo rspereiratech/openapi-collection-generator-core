@@ -105,6 +105,6 @@ CollectionGenerationOrchestrator orchestrator = new CollectionGenerationOrchestr
 
 - Requires **Java 17+** (`record`, `switch` expressions, `HexFormat`).
 - Pulls in `swagger-parser` (parsing) and `jackson-databind` (serialisation).
-- Test scope: JUnit 5, AssertJ, Mockito.
+- Test scope: JUnit 5 and Mockito.
 
 Versions are managed in the parent POM `openapi-collection-generator-parent`.
