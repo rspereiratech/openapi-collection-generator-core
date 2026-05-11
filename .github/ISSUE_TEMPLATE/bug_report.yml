@@ -1,0 +1,83 @@
+name: Bug report
+description: Report a defect in the core library
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! Please fill in the
+        sections below so the issue can be reproduced and triaged quickly.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the bug.
+      placeholder: When generating a collection from spec X, the output Y is wrong because Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: openapi-input
+    attributes:
+      label: OpenAPI input
+      description: |
+        The OpenAPI specification that triggers the bug, ideally a minimal
+        reduction. Paste it inline as YAML/JSON, or link to a gist.
+      render: yaml
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-output
+    attributes:
+      label: Actual behaviour / output
+      description: What the core library produced (logs, exceptions, partial output).
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: input
+    id: module-version
+    attributes:
+      label: Module version / commit
+      description: Version of `openapi-collection-generator-core` (or commit hash if built from source).
+      placeholder: "1.0.0-SNAPSHOT @ abcdef0"
+    validations:
+      required: true
+
+  - type: input
+    id: java-version
+    attributes:
+      label: Java version
+      placeholder: "e.g. 17.0.12 (Temurin)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stack trace
+      description: Any relevant log output or stack trace.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: pre-flight
+    attributes:
+      label: Pre-flight checklist
+      options:
+        - label: I have searched existing issues and could not find a duplicate.
+          required: true
+        - label: My report follows the [Code of Conduct](../CODE_OF_CONDUCT.md).
+          required: true
