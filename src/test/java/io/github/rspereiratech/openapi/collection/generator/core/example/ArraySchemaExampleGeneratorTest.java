@@ -73,4 +73,22 @@ class ArraySchemaExampleGeneratorTest {
         assertEquals(1, list.size());
         assertNotNull(list.get(0));
     }
+
+    @Test
+    void usesPlainObjectWhenRecursiveReturnsNull() {
+        ArraySchema arr = new ArraySchema();
+        StringSchema item = new StringSchema();
+        arr.setItems(item);
+        OpenAPI api = new OpenAPI();
+        when(recursive.generate(item, api)).thenReturn(null);
+
+        ArraySchemaExampleGenerator gen = new ArraySchemaExampleGenerator(next, recursive);
+
+        Object result = gen.generate(arr, api);
+
+        assertInstanceOf(List.class, result);
+        List<?> list = (List<?>) result;
+        assertEquals(1, list.size());
+        assertNotNull(list.get(0));
+    }
 }
