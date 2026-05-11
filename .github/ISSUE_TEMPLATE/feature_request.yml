@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest an improvement or new capability
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Please describe the problem you're trying
+        to solve before jumping into a solution — it helps evaluate
+        alternatives and scope.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem or limitation are you facing today?
+      placeholder: When generating a collection from spec X, I cannot do Y because…
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you like this to work? Describe the desired behaviour or output.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you have tried or considered, and why they fall short.
+    validations:
+      required: false
+
+  - type: textarea
+    id: openapi-example
+    attributes:
+      label: OpenAPI example
+      description: A small OpenAPI snippet illustrating the input this feature would consume.
+      render: yaml
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope check
+      description: |
+        Where does this change belong? See the module scope in CONTRIBUTING.md.
+      options:
+        - This module (Insomnia format adapter)
+        - Core module (`-core`) — please open the issue there instead
+        - Maven plugin (`-maven-plugin`) — please open the issue there instead
+        - I'm not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pre-flight
+    attributes:
+      label: Pre-flight checklist
+      options:
+        - label: I have searched existing issues and could not find a duplicate.
+          required: true
+        - label: My request follows the [Code of Conduct](../CODE_OF_CONDUCT.md).
+          required: true
