@@ -39,7 +39,7 @@ public class ArraySchemaExampleGenerator implements SchemaExampleGenerator {
             return next != null ? next.generate(schema, openApi) : null;
         }
 
-        Object item = arr.getItems() != null ? recursive.generate(arr.getItems(), openApi) : new Object();
-        return List.of(item);
+        Object item = arr.getItems() != null ? recursive.generate(arr.getItems(), openApi) : null;
+        return List.of(item != null ? item : new Object());
     }
 }
