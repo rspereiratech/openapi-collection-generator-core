@@ -50,7 +50,7 @@ Good change candidates:
 
 1. Fork the repo and create a branch from `master` named after the change (e.g. `feat/bruno-format`, `fix/composed-schema-recursion`).
 2. Make your changes in small, reviewable commits.
-3. Add or update tests. We use **JUnit 5** + **AssertJ** + **Mockito**. New behaviour without tests will not be merged.
+3. Add or update tests. We use **JUnit 5** (`org.junit.jupiter.api.Assertions`) + **Mockito**. New behaviour without tests will not be merged. Do not introduce AssertJ.
 4. Run `mvn clean install` locally — both compile and tests must be green.
 5. Update relevant docs under [`docs/`](docs/README.md) and the top-level [`README.md`](README.md) if your change is user-visible.
 6. Open a PR. Link the issue it resolves. Describe what changed, why, and any trade-offs you considered.

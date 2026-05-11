@@ -10,5 +10,6 @@ Reference docs for `openapi-collection-generator-core`.
 | [security.md](security.md) | Security scheme handling, injectors, environment variables |
 | [extensions.md](extensions.md) | Supported OpenAPI vendor extensions (`x-*`) |
 | [examples.md](examples.md) | Schema example generation strategy |
+| [publishing.md](publishing.md) | SNAPSHOT/release publishing to Sonatype Central, required secrets |
 
 For a quick start, see the top-level [README](../README.md).

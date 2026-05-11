@@ -6,6 +6,7 @@
 [![Swagger Parser 2.x](https://img.shields.io/badge/Swagger%20Parser-2.x-85EA2D.svg)](https://github.com/swagger-api/swagger-parser)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Snapshot](https://img.shields.io/badge/Status-Snapshot-orange.svg)](#)
+[![Donate](https://img.shields.io/badge/Donate-NOWPayments-1A1A1A?logo=bitcoin&logoColor=white)](https://nowpayments.io/donation/rspereiratech)
 
 Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
 
@@ -109,6 +110,14 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, con
 Found a vulnerability? Don't open a public issue — see [SECURITY.md](SECURITY.md) for the disclosure process.
 
 For internals on how the library handles authentication and secrets, see [docs/security.md](docs/security.md).
+
+## Support
+
+[![Donate](https://img.shields.io/badge/Donate-NOWPayments-1A1A1A?logo=bitcoin&logoColor=white)](https://nowpayments.io/donation/rspereiratech)
+
+If this project saves you time, consider supporting development
+via [NOWPayments](https://nowpayments.io/donation/rspereiratech).
+Every contribution helps keep it maintained — thank you!
 
 ## License
 
