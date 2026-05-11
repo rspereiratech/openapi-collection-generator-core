@@ -1,11 +1,12 @@
 # OpenAPI Collection Generator — Core
 
+[![Build](https://github.com/rspereiratech/openapi-collection-generator-core/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/rspereiratech/openapi-collection-generator-core/actions/workflows/build.yml)
+[![CodeQL](https://github.com/rspereiratech/openapi-collection-generator-core/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/rspereiratech/openapi-collection-generator-core/actions/workflows/codeql.yml)
 [![Java 17+](https://img.shields.io/badge/Java-17%2B-007396.svg)](https://adoptium.net/)
 [![Maven 3.8+](https://img.shields.io/badge/Maven-3.8%2B-C71A36.svg)](https://maven.apache.org/)
 [![OpenAPI 3.0](https://img.shields.io/badge/OpenAPI-3.0-6BA539.svg)](https://spec.openapis.org/oas/v3.0.3)
 [![Swagger Parser 2.x](https://img.shields.io/badge/Swagger%20Parser-2.x-85EA2D.svg)](https://github.com/swagger-api/swagger-parser)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Snapshot](https://img.shields.io/badge/Status-Snapshot-orange.svg)](#)
 [![Donate](https://img.shields.io/badge/Donate-NOWPayments-1A1A1A?logo=bitcoin&logoColor=white)](https://nowpayments.io/donation/rspereiratech)
 
 Core library for generating API client collections (Postman, Insomnia) from an OpenAPI 3.x specification.
